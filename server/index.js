@@ -14,11 +14,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
+app.get("/", function (req, res) { res.send("This is the Workout Buddy API") })
 app.use("/reports", reportRoutes)
 app.use("/users", userRoutes)
 app.use("/workouts", workoutRoutes)
 app.use("/exercises", exerciseRoutes)
-app.get("/", function (req, res) { res.send("This is the Workout Buddy API") })
 
 // Load MongoDB
 loadDB()

@@ -6,6 +6,8 @@ router.get("/", usersController.getUsers)
 
 router.post("/create", usersController.createUser)
 
+router.post("/login", usersController.loginUser)
+
 router.get("/:id", usersController.getUser)
 
 router.post("/:id/updateStreak", usersController.updateUserStreak)
