@@ -1,14 +1,12 @@
 const Mongoose = require('mongoose');
 const { Schema } = Mongoose;
 
-// User Schema
+// Report Schema
 const ReportSchema = new Schema({
-  email: {
-    type: String,
-    required: () => {
-      return this.provider !== 'email' ? false : true;
-    }
-  }
+  id: { type: 'ObjectId' },
+  report_date: { type: Date, required: true},
+  message: { type: String, required: true },
+  status: { type: String, enum: ['OPEN', 'CLOSED'], required: true },
 });
 
-module.exports = Mongoose.model('User', ReportSchema);
+module.exports = Mongoose.model('Report', ReportSchema);

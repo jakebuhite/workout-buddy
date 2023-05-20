@@ -1,14 +1,12 @@
 const Mongoose = require('mongoose');
 const { Schema } = Mongoose;
 
-// User Schema
+// Workout Schema
 const WorkoutSchema = new Schema({
-  email: {
-    type: String,
-    required: () => {
-      return this.provider !== 'email' ? false : true;
-    }
-  }
+  id: { type: 'ObjectId' },
+  workout_name: { type: String, required: true },
+  workout_difficulty: { type: String, enum: ['EASY', 'MEDIUM', 'HARD'], required: true },
+  exercises: [ { type: 'ObjectId' } ]
 });
 
-module.exports = Mongoose.model('User', WorkoutSchema);
+module.exports = Mongoose.model('Workout', WorkoutSchema);
