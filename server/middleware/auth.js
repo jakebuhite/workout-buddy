@@ -1,3 +1,5 @@
+const User = require("../models/user")
+
 const jwt = require("jsonwebtoken")
 const path = require('path')
 const envPath = path.join(__dirname, '..', '..', '/.env')
@@ -19,11 +21,22 @@ module.exports = {
 
         next()
     },
-    checkRole: (req, res, next) => {
-        //const userRole = req.user.role
-        console.log(req.user)
+    isAdmin: async (req, res, next) => {
+        const userId = req.user
+        try {
+            const user = await User.findById(userId)
+            if (user === null) {
+                return res.status(404).send("No user found")
+            } else {
+                const role = user.role
+                if (role === 0) {
+                    res.status(401).send("You are not authorized to view this page")
+                }
+            }
+        } catch (err) {
+            console.log(err)
+            return res.status(400).send("There was an error processing your request. Please try again")
+        }
         next()
-        //res.status(401).send("You are not authorized to view this page")
-        //next()
     }
 }
