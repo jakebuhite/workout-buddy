@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Header = ({ content }) => {
+const Header = ({ content, ...rest }) => {
   return (
-    <h1>{ content }</h1>
+    <h1 {...rest}>{ content }</h1>
   );
 };
 
