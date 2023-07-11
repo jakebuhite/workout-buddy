@@ -15,3 +15,33 @@ h2 {
 .heading {
     padding: 20px 50px 15px 50px;
 }
+.statistics, .workouts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 10px;
+    color: #D2D2D2;
+}
+.statistics div, table {
+    background-color: #2C2C2C;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Table */
+table {
+    width: 75%;
+    border: 2px solid #007BFF;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 20px;
+}
+td a {
+    text-decoration: none;
+    color: #D2D2D2;
+}
+td a:hover {
+    color: #007BFF;
+}
