@@ -15,7 +15,7 @@ h2 {
 .heading {
     padding: 20px 50px 15px 50px;
 }
-.statistics, .workouts {
+.statistics, .workouts, .exercises {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

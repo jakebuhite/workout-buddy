@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Button from "../Button/index";
+import Button from "../Button";
 
 const Form = ({ id1, label1, type1, id2, label2, type2 }) => {
   return (

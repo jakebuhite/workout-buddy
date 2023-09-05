@@ -1,8 +1,8 @@
 import React from "react"
 import "../pages.css"
 
-import Header from "../../components/Header/index"
-import Button from "../../components/Button/index"
+import Header from "../../components/Header"
+import Button from "../../components/Button"
 
 const LogPage = () => {
   return (
@@ -28,7 +28,7 @@ const LogPage = () => {
           </tr>
         </table>
       </div>
-      <Button label="Add" onClick={()=>window.open(`${window.location.origin}/logs/add`)} />
+      <Button label="Add" onClick={()=>window.open(`${window.location.origin}/logs/add`, "_self")} />
     </div>
   );
 };

@@ -2,23 +2,22 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Component } from 'react';
 import './App.css';
 
-import HomePage from "./pages/Home/index"
-import LoginPage from "./pages/Login/index"
-import RegisterPage from "./pages/Register/index"
-import WorkoutsPage from "./pages/Workouts/index"
-import WorkoutPage from "./pages/Workout/index"
-import LogPage from "./pages/Log/index"
+import HomePage from "./pages/Home"
+import LoginPage from "./pages/Login"
+import RegisterPage from "./pages/Register"
+import WorkoutsPage from "./pages/Workouts"
+import WorkoutPage from "./pages/Workout"
+import LogPage from "./pages/Log"
 import AddLogPage from "./pages/Log/add"
-import ReportPage from "./pages/Report/index"
-import ReportsPage from "./pages/Reports/index"
+import ReportPage from "./pages/Report"
 
-import Navigation from "./components/Navbar/index"
-import Footer from "./components/Footer/index"
+import Navigation from "./components/Navbar"
+import Footer from "./components/Footer"
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App" style={{background: "#121212"}}>
       <Navigation />
       <BrowserRouter>
         <Routes>
@@ -34,7 +33,6 @@ class App extends Component {
             <Route path="/logs/add" element={<AddLogPage />} />
           </Route>
           <Route path="/report" element={<ReportPage />} />
-          <Route path="/reports" element={<ReportsPage />} />
         </Routes>
       </BrowserRouter>
       <Footer />

@@ -1,0 +1,20 @@
+.exercise {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2C2C2C;
+    color: #C7C7C7;
+    width: 850px;
+    height: 150px;
+}
+.exercise .content {
+    padding: 20px;
+}
+.exercise .title {
+    font-size: 2rem;
+    color: white;
+}
+.exercise img {
+    width: 100%; 
+    max-width: 250px; 
+    height: 100%;
+}

@@ -9,6 +9,8 @@ input {
     border: 3px solid #121212;
     border-radius: 15px;
     font-size: medium;
+    color: #737171;
+    background-color: #2C2C2C;
 }
 input:focus {
     outline: none;

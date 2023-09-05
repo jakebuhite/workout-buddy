@@ -1,7 +1,7 @@
 import React from "react"
 import "../pages.css"
 
-import Header from "../../components/Header/index"
+import Header from "../../components/Header"
 
 const WorkoutsPage = () => {
   return (
